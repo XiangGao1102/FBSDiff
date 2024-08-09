@@ -13,7 +13,7 @@ class FBS_Sampler(DDIM_Sampler):
     @torch.no_grad()
     def decode_with_low_FBS(self, ref_latent, cond, t_dec, unconditional_guidance_scale,
                                  unconditional_conditioning, use_original_steps=False, callback=None,
-                                 threshold=80, merge_step=450):
+                                 threshold=80, end_step=450):
 
         timesteps = np.arange(self.ddpm_num_timesteps) if use_original_steps else self.ddim_timesteps
         timesteps = timesteps[:t_dec]
@@ -27,7 +27,7 @@ class FBS_Sampler(DDIM_Sampler):
         for i, step in enumerate(iterator):
             index = total_steps - i - 1
             ts = torch.full((ref_latent.shape[0],), step, device=ref_latent.device, dtype=torch.long)
-            if step > merge_step:
+            if step > end_step:
                 x_dec_dct = dct_2d(x_dec, norm='ortho')
                 ref_latent_dct = dct_2d(ref_latent, norm='ortho')
                 merged_dct = low_pass(ref_latent_dct, threshold) + high_pass(x_dec_dct, threshold+1)
@@ -50,7 +50,7 @@ class FBS_Sampler(DDIM_Sampler):
     @torch.no_grad()
     def decode_with_high_FBS(self, ref_latent, cond, t_dec, unconditional_guidance_scale,
                                  unconditional_conditioning, use_original_steps=False, callback=None,
-                                 threshold=20, merge_step=500):
+                                 threshold=20, end_step=500):
 
         timesteps = np.arange(self.ddpm_num_timesteps) if use_original_steps else self.ddim_timesteps
         timesteps = timesteps[:t_dec]
@@ -64,7 +64,7 @@ class FBS_Sampler(DDIM_Sampler):
         for i, step in enumerate(iterator):
             index = total_steps - i - 1
             ts = torch.full((ref_latent.shape[0],), step, device=ref_latent.device, dtype=torch.long)
-            if step > merge_step:
+            if step > end_step:
                 x_dec_dct = dct_2d(x_dec, norm='ortho')
                 ref_latent_dct = dct_2d(ref_latent, norm='ortho')
                 merged_dct = high_pass(ref_latent_dct, threshold) + low_pass(x_dec_dct, threshold-1)
@@ -87,7 +87,7 @@ class FBS_Sampler(DDIM_Sampler):
     @torch.no_grad()
     def decode_with_mid_FBS(self, ref_latent, cond, t_dec, unconditional_guidance_scale,
                                  unconditional_conditioning, use_original_steps=False, callback=None,
-                                 threshold1=20, threshold2=40, merge_step=500):
+                                 threshold1=20, threshold2=40, end_step=500):
 
         timesteps = np.arange(self.ddpm_num_timesteps) if use_original_steps else self.ddim_timesteps
         timesteps = timesteps[:t_dec]
@@ -101,7 +101,7 @@ class FBS_Sampler(DDIM_Sampler):
         for i, step in enumerate(iterator):
             index = total_steps - i - 1
             ts = torch.full((ref_latent.shape[0],), step, device=ref_latent.device, dtype=torch.long)
-            if step > merge_step:
+            if step > end_step:
                 x_dec_dct = dct_2d(x_dec, norm='ortho')
                 ref_latent_dct = dct_2d(ref_latent, norm='ortho')
                 merged_dct = low_pass(x_dec_dct, threshold1) + high_pass(low_pass(ref_latent_dct, threshold2), threshold1+1) + high_pass(x_dec_dct, threshold2+1)
