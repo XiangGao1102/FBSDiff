@@ -50,7 +50,7 @@ class FBS_Sampler(DDIM_Sampler):
     @torch.no_grad()
     def decode_with_high_FBS(self, ref_latent, cond, t_dec, unconditional_guidance_scale,
                                  unconditional_conditioning, use_original_steps=False, callback=None,
-                                 threshold=20, end_step=500):
+                                 threshold=3, end_step=500):
 
         timesteps = np.arange(self.ddpm_num_timesteps) if use_original_steps else self.ddim_timesteps
         timesteps = timesteps[:t_dec]
@@ -87,7 +87,7 @@ class FBS_Sampler(DDIM_Sampler):
     @torch.no_grad()
     def decode_with_mid_FBS(self, ref_latent, cond, t_dec, unconditional_guidance_scale,
                                  unconditional_conditioning, use_original_steps=False, callback=None,
-                                 threshold1=20, threshold2=40, end_step=500):
+                                 threshold1=5, threshold2=80, end_step=500):
 
         timesteps = np.arange(self.ddpm_num_timesteps) if use_original_steps else self.ddim_timesteps
         timesteps = timesteps[:t_dec]
