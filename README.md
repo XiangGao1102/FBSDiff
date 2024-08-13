@@ -28,3 +28,4 @@ Last, install the required packages in the requirements.txt:
 pip install -r requirements.txt
 </code></pre>
 
+# Run the code
