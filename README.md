@@ -29,3 +29,7 @@ pip install -r requirements.txt
 </code></pre>
 
 # Run the code
+Our model is training-free, you can translate a given reference image with a certain text prompt by directly running the following inference script:
+<pre><code>
+python inference.py
+</code></pre>>
