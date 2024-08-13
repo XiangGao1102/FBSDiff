@@ -32,5 +32,5 @@ pip install -r requirements.txt
 Our model is training-free, you can translate a given reference image with a certain text prompt by directly running the following inference script:
 <pre><code>
 python inference.py
-</code></pre>>
-In the inference script **inference.py**, 
+</code></pre>
+In the inference script **inference.py**, you can manually set the mode of frequency band substitution (FBS), including low-FBS, high-FBS, and mid-FBS. You can also set or adjust model hyper-parameters, such as the filtering thresholds used in the corresponding mode of frequency band substitution. The image path of the reference image and the target text prompt are also set in the inference script.
