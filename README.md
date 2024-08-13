@@ -13,7 +13,7 @@ Large-scale text-to-image diffusion models have been a revolutionary milestone i
 Overview of FBSDiff. Based on the pre-trained latent diffusion model (LDM), FBSDiff starts with an inversion trajectory that inverts reference image into the LDM Gaussian noise space, then a reconstruction trajectory is applied to reconstruct the reference image from the inverted Gaussian noise, providing intermediate denoising results as pivotal guidance features. The guidance features are leveraged to guide the text-driven sampling trajectory of the LDM to exert reference image control, which is realized by dynamically transplanting certain DCT frequency bands from diffusion features along the reconstruction trajectory into the corresponding features along the sampling trajectory. The dynamic DCT frequency band transplantation is implemented in a plug-and-play manner with our proposed frequency band substitution layer (FBS layer).
 
 # Environment
-We use Anaconda environment with python 3.8 and pytorch 2.0, which can be built with the following commands:
+We use Anaconda environment with python 3.8 and pytorch 2.0, which can be built with the following commands: <br />
 First, create a new conda virtual environment: <br>
 <pre><code>
 conda create -n FBSDiff python=3.8
