@@ -33,3 +33,4 @@ Our model is training-free, you can translate a given reference image with a cer
 <pre><code>
 python inference.py
 </code></pre>>
+In the inference script **inference.py**, 
