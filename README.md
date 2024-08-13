@@ -16,9 +16,10 @@ Overview of FBSDiff. Based on the pre-trained latent diffusion model (LDM), FBSD
 We use Anaconda environment with python 3.8 and pytorch 2.0, which can be built with the following commands:
 First, create a new conda virtual environment: <br>
 <pre><code>
-conda create -n env_name python=3.8
+conda create -n FBSDiff python=3.8
 </code></pre>
 Then, install pytorch using conda: <br>
 <pre><code>
+conda activate FBSDiff
 conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 -c pytorch
 </code></pre>
