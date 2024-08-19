@@ -1,1 +1,1 @@
-Download and put **clip-vit-large-patch14** into this directory. It can be downloaded from [here](https://huggingface.co/openai/clip-vit-large-patch14) with shown codes, or manually downloaded file by file from [here](https://huggingface.co/openai/clip-vit-large-patch14/tree/main).
+Download and put **clip-vit-large-patch14** into this directory. It can be downloaded from [here](https://huggingface.co/openai/clip-vit-large-patch14) with the demo codes, or manually downloaded file by file from [here](https://huggingface.co/openai/clip-vit-large-patch14/tree/main).
