@@ -28,6 +28,11 @@ Last, install the required packages in the requirements.txt:
 pip install -r requirements.txt
 </code></pre>
 
+# Download pre-trained models
+Our method requires the pre-trained Stable Diffusion model and the CLIP text encoder. <br />
+1. Download and Stable Diffusion v1.5 model checkpoint **file v1-5-pruned-emaonly.ckpt** and put it into the **models** folder. It can be downloaded from [this link](https://huggingface.co/runwayml/stable-diffusion-v1-5/blob/main/v1-5-pruned-emaonly.ckpt). <br />
+2. Download the **clip-vit-large-patch14** and put it into the **openai** folder. It can be downloaded from [here](https://huggingface.co/openai/clip-vit-large-patch14) with the demo codes, or manually downloaded file by file from [here](https://huggingface.co/openai/clip-vit-large-patch14/tree/main).
+
 # Run the code
 Our model is training-free, you can translate a given reference image with a certain text prompt by directly running the following inference script:
 <pre><code>
