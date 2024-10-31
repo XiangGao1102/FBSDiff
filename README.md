@@ -1,6 +1,19 @@
 # FBSDiff: Plug-and-Play Frequency Band Substitution of Diffusion Features for Highly Controllable Text-Driven Image Translation
 This is the code of the paper "FBSDiff: Plug-and-Play Frequency Band Substitution of Diffusion Features for Highly Controllable Text-Driven Image Translation" accepted by ACMMM 2024. [Paper link](https://arxiv.org/abs/2408.00998)
 
+# Citation #
+<pre>
+<code>
+@inproceedings{gao2024fbsdiff,
+  title={FBSDiff: Plug-and-Play Frequency Band Substitution of Diffusion Features for Highly Controllable Text-Driven Image Translation},
+  author={Gao, Xiang and Liu, Jiaying},
+  booktitle={Proceedings of the 32nd ACM International Conference on Multimedia},
+  pages={4101--4109},
+  year={2024}
+}
+</code>
+</pre>
+
 ![](imgs/teaser.jpg "teaser")
 Based on the pre-trained text-to-image diffusion model, FBSDiff enables efficient text-driven image-to-image translation by proposing a plug-and-play reference image guidance mechanism. It allows flexible control over different guiding factors (e.g., image appearance, image layout, image contours) of the reference image to the T2I generated image, simply by dynamically substituting different types of DCT frequency bands during the reverse sampling process of the diffusion model.
 
