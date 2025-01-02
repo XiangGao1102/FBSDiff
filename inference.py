@@ -23,7 +23,7 @@ encode_steps = 1000
 # set the total steps of the sampling trajectory
 decode_steps = 100
 
-# set the value of lambda (0~1), the larger the lambda_end, the shorter the calibration phase is.
+# set the value of lambda (0~1), the larger the value, the shorter the calibration phase.
 lambda_end = 0.5
 
 # the end step of the calibration phase
