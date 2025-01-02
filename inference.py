@@ -34,7 +34,7 @@ ddim_eta = 0
 unconditional_guidance_scale = 7.5
 
 # set the image path of the reference image
-img_path = 'test.jpg'
+img_path = 'Edinburgh.jpg'
 
 # set the target text prompt
 target_prompt = 'painting of ancient ruins'
