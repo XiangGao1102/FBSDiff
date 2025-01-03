@@ -53,6 +53,12 @@ python inference.py
 </code></pre>
 In the inference script **inference.py**, you can manually select the mode of frequency band substitution (FBS), including low-FBS, high-FBS, and mid-FBS. You can also set or adjust model hyper-parameters, such as the filtering thresholds used in the corresponding mode of frequency band substitution. The image path of the reference image and the target text prompt are also manualy set in the inference script.
 
+# Test the demo
+We also provide a jupyter notebook demo code for ease of visualization, please open it by running the following command:
+<pre><code>
+jupyter notebook demo.ipynb
+</code></pre>
+
 # Results
 ![](imgs/results.jpg "example results")
 Example qualitative results of our method with different types of frequency band substitution. For low-frequency band substitution (low-FBS), the generated image is controlled by the reference image in terms of image appearance and layout; for high-frequency band substitution (high-FBS), the reference image controls image contours of the generated image; as for mid-frequency band substitution (mid-FBS), only image layout of the generated image is controlled by the reference image. Better viewed with zoom-in. For more results, please refer to [our paper](https://arxiv.org/abs/2408.00998).
