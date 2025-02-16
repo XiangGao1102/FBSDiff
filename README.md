@@ -1,5 +1,5 @@
 # FBSDiff: Plug-and-Play Frequency Band Substitution of Diffusion Features for Highly Controllable Text-Driven Image Translation
-The official code of the paper "FBSDiff: Plug-and-Play Frequency Band Substitution of Diffusion Features for Highly Controllable Text-Driven Image Translation" accepted by ACM MM 2024. [Paper link](https://arxiv.org/abs/2408.00998)
+[ACM MM 2024] The official code of the paper "FBSDiff: Plug-and-Play Frequency Band Substitution of Diffusion Features for Highly Controllable Text-Driven Image Translation". [Paper link](https://arxiv.org/abs/2408.00998)
 
 # Citation #
 <pre>
