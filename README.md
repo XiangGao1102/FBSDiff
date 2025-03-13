@@ -43,7 +43,7 @@ pip install -r requirements.txt
 
 # Download pre-trained models
 Our method requires the pre-trained Stable Diffusion model and the CLIP text encoder. <br />
-1. Download the Stable Diffusion v1.5 model checkpoint **file v1-5-pruned-emaonly.ckpt** and put it right into the **"models"** folder. It can be downloaded from [here](https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/tree/main). <br />
+1. Download the Stable Diffusion v1.5 model checkpoint file **v1-5-pruned-emaonly.ckpt** and put it right into the **"models"** folder. It can be downloaded from [here](https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/tree/main). <br />
 2. Download the **clip-vit-large-patch14** and put it right into the **"openai"** folder. It can be downloaded from [here](https://huggingface.co/openai/clip-vit-large-patch14) with the demo code, or manually downloaded file by file from [here](https://huggingface.co/openai/clip-vit-large-patch14/tree/main).
 
 # Run the code
