@@ -7,7 +7,7 @@
 @inproceedings{gao2024fbsdiff,
   title={FBSDiff: Plug-and-Play Frequency Band Substitution of Diffusion Features for Highly Controllable Text-Driven Image Translation},
   author={Gao, Xiang and Liu, Jiaying},
-  booktitle={Proceedings of the 32nd ACM International Conference on Multimedia},
+  booktitle={Proceedings of the ACM International Conference on Multimedia},
   pages={4101--4109},
   year={2024}
 }
